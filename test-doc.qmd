@@ -1,0 +1,13 @@
+---
+title: "test doc"
+author: "Sumaiya Alvi"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(lterdatasampler)
+data(pie_crab)
+```
+
