@@ -1,13 +1,32 @@
 ---
 title: "test doc"
 author: "Sumaiya Alvi"
+date: "2026-02-20"
 format: html
-editor: visual
 ---
 
+# Set up
+
 ```{r}
-library(tidyverse)
-library(lterdatasampler)
-data(pie_crab)
+#| label: packages and data
+#| message: false
+
+library(tidyverse) #general use package
+library(lterdatasampler) #package of datasets
+
+data(pie_crab) #crab size dataset
+```
+
+# Exploratory data visualization
+
+```{r}
+#| label: latitude and size plot
+
+#base layer: ggplot
+ggplot(data = pie_crab, #dataset
+       aes(x=latitude, # x axis latitude, y-axis crab size
+           y = size)) +
+  #first layer: points to represent individual crabs
+  geom_point()
 ```
 
